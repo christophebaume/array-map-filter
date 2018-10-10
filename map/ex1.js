@@ -5,7 +5,7 @@ En utilisant map, cette fonction doit renvoyer un tableau avec,
 pour chaque chaîne CHAINE de longueur N en entrée, la chaîne "CHAINE contains N characters"
 en sortie.
 
-Exemple d'entrée:
+Exemple d'entrée: 
   [
     'Chicken',
     'Bacon',
@@ -19,10 +19,15 @@ En sortie: [
   'Mayonnaise contains 10 characters'
 ]
 
- */
+ */  
 
 function getStringsLength(strings) {
+  return strings.map(element => {
+    return  element + " contains " + element.length + " characters"
+    })
 }
+
+console.log(getStringsLength(['Cat', 'Lion', 'Tiger', 'Jaguar', 'Leopard']))
 
 // Si besoin, tu peux toujours visualiser le résultat avec console.log,
 // mais alors, il faut alors lancer l'exercice avec node map/ex1
