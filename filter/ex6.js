@@ -16,7 +16,7 @@ Exemple d'entrée:
   "Which one is better, React or Angular?",
   'There is no "better", it depends on your use case, DAMN YOU'
 ]
-2. mots à bannir: ['bloody', 'damn']
+2. mots à bannir: ['loody', 'damn'b]
 
 Sortie attendue:
 [
@@ -27,6 +27,12 @@ Sortie attendue:
 */
 
 function filterOffensiveComments(comments, bannedWords) {
+  return comments.filter(e => {
+    if (e.toLowerCase().includes('bloody') || e.toLowerCase().includes('damn')) {
+      return false}
+      return true
+  }
+  )
 }
 
 // Ne pas modifier l'export
